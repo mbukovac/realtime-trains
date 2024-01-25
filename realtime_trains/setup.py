@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="realtime-trains",
-    version="0.0.2",
+    version="0.0.3",
     description="Unofficial Python library for Realtime Trains API",
     package_dir={"": "realtime_trains"},
 	packages=find_packages(where="realtime_trains"),
