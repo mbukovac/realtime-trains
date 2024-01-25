@@ -15,7 +15,7 @@ class SearchOptions(BaseModel):
 	num_results: Optional[int] = None
 	passenger_only: Optional[bool] = True
 	show_arrivals: Optional[bool] = False
-	show_train_only: Optional[bool] = True
+	show_trains_only: Optional[bool] = True
 
 class RealtimeTrainsApi:
 	_BASE_URL: str = "https://api.rtt.io/api/v1/json/"
@@ -136,7 +136,7 @@ class RealtimeTrainsApi:
 			if params.passenger_only:
 				services = [service for service in services if service.isPassenger]
 
-			if params.show_train_only:
+			if params.show_trains_only:
 				services = [service for service in services if service.serviceType == "train"]
 
 			# If we specified the number of results to return, only return that number of results
